@@ -304,29 +304,55 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Contact form (demo only)
+  // Contact form - sends to atvrtechsolutions@gmail.com via FormSubmit.co
   const contactForm = document.getElementById("contact-form");
   if (contactForm) {
-    contactForm.addEventListener("submit", (e) => {
+    contactForm.addEventListener("submit", async (e) => {
       e.preventDefault();
-      const name = document.getElementById("name").value.trim();
       const btn = contactForm.querySelector('button[type="submit"]');
       const originalText = btn.textContent;
+      const name = document.getElementById("name").value.trim();
 
       btn.textContent = currentLang === "en" ? "Sending..." : "पाठवत आहे...";
       btn.disabled = true;
 
-      // Simulate send
-      setTimeout(() => {
+      const data = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        service: document.getElementById("service").value,
+        message: document.getElementById("message").value,
+        _subject: `New project inquiry from ${name}`,
+        _captcha: "false",
+        _template: "table"
+      };
+
+      try {
+        const res = await fetch("https://formsubmit.co/ajax/atvrtechsolutions@gmail.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "Accept": "application/json" },
+          body: JSON.stringify(data)
+        });
+
+        if (res.ok) {
+          alert(
+            currentLang === "en"
+              ? `Thank you ${name}! Your message has been sent. We will contact you soon.`
+              : `धन्यवाद ${name}! तुमचा संदेश पाठवला गेला आहे. आम्ही लवकरच संपर्क करू.`
+          );
+          contactForm.reset();
+        } else {
+          throw new Error("Submission failed");
+        }
+      } catch (err) {
         alert(
           currentLang === "en"
-            ? `Thank you ${name}! Your message has been received. We will contact you soon.`
-            : `धन्यवाद ${name}! तुमचा संदेश प्राप्त झाला आहे. आम्ही लवकरच संपर्क करू.`
+            ? "Sorry, something went wrong. Please try again or email us directly at atvrtechsolutions@gmail.com"
+            : "क्षमस्व, काहीतरी चूक झाली. कृपया पुन्हा प्रयत्न करा किंवा atvrtechsolutions@gmail.com वर थेट ईमेल करा."
         );
-        contactForm.reset();
+      } finally {
         btn.textContent = originalText;
         btn.disabled = false;
-      }, 900);
+      }
     });
   }
 });
