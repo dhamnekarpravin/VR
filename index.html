@@ -25,6 +25,7 @@
       <ul class="nav-menu" id="nav-menu">
         <li class="nav-item"><a href="#home" class="nav-link" data-i18n="nav_home">Home</a></li>
         <li class="nav-item"><a href="#about" class="nav-link" data-i18n="nav_about">About</a></li>
+        <li class="nav-item"><a href="#team" class="nav-link" data-i18n="nav_team">Team</a></li>
         <li class="nav-item"><a href="#features" class="nav-link" data-i18n="nav_features">Features</a></li>
         <li class="nav-item"><a href="#projects" class="nav-link">College Projects</a></li>
         <li class="nav-item"><a href="#testimonials" class="nav-link" data-i18n="nav_testimonials">Testimonials</a></li>
@@ -45,7 +46,6 @@
       </div>
     </nav>
   </header>
-
   <!-- ========== HERO / HOME ========== -->
   <section class="hero" id="home">
     <div class="hero-overlay"></div>
@@ -59,15 +59,38 @@
         </div>
       </div>
       <div class="hero-image-wrapper">
-        <div class="hero-card">
-          <img src="/assets/test3.png"
-               alt="VRTech"
-               class="hero-card-img">
-          <div class="hero-card-body">
-            <h3 class="hero-card-name">VRTech</h3>
-            <!-- <p class="hero-card-role" data-i18n="hero_badge">Software Engineer @ TCS</p> -->
-            <a href="#" class="hero-card-btn" id="portfolio-link" target="_blank" rel="noopener" data-i18n="hero_portfolio">View My Portfolio</a>
+        <div class="scene">
+          <div class="cube">
+            <div class="cube-face cube-front">
+              <div class="face-icon">🌐</div>
+              <span>Web</span>
+            </div>
+            <div class="cube-face cube-back">
+              <div class="face-icon">🗄️</div>
+              <span>DBMS</span>
+            </div>
+            <div class="cube-face cube-right">
+              <div class="face-icon">💻</div>
+              <span>Software</span>
+            </div>
+            <div class="cube-face cube-left">
+              <div class="face-icon">⚙️</div>
+              <span>Auto</span>
+            </div>
+            <div class="cube-face cube-top">
+              <div class="face-icon">🎨</div>
+              <span>Design</span>
+            </div>
+            <div class="cube-face cube-bottom">
+              <div class="face-icon">🚀</div>
+              <span>Launch</span>
+            </div>
           </div>
+        </div>
+        <div class="floating-shapes">
+          <div class="shape shape-1"></div>
+          <div class="shape shape-2"></div>
+          <div class="shape shape-3"></div>
         </div>
       </div>
     </div>
@@ -115,6 +138,70 @@
             <h4 data-i18n="about_card2_title">Our Vision</h4>
             <p data-i18n="about_card2_text">To become the most trusted technology partner for small and mid-size organizations across India.</p>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TEAM ========== -->
+  <section class="section team" id="team">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag" data-i18n="team_tag">Our Team</span>
+        <h2 class="section-title" data-i18n="team_title">Meet the Experts</h2>
+        <p class="section-desc" data-i18n="team_desc">Passionate professionals dedicated to delivering exceptional digital solutions.</p>
+      </div>
+
+      <div class="team-grid">
+        <!-- Founder -->
+        <div class="team-card founder-card">
+          <div class="team-avatar">
+            <span class="avatar-initials">PD</span>
+            <span class="founder-badge" data-i18n="team_founder_badge">Founder</span>
+          </div>
+          <h3><a href="https://www.linkedin.com/in/pravindhamnekar" target="_blank" rel="noopener" class="founder-link"></a>Pravin Dhamanekar</a></h3>
+          <p class="team-role">Software Development Engineer @ TCS</p>
+          <p class="team-bio">Leading the vision and technical strategy with 1+ years of experience in building scalable software solutions.</p>
+        </div>
+
+        <!-- Team Member 1 -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="avatar-initials">RS</span>
+          </div>
+          <h3>Rahul Sharma</h3>
+          <p class="team-role">Full Stack Developer</p>
+          <p class="team-bio">Expert in React, Node.js and modern web technologies with a passion for clean code.</p>
+        </div>
+
+        <!-- Team Member 2 -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="avatar-initials">AP</span>
+          </div>
+          <h3>Anita Patil</h3>
+          <p class="team-role">UI/UX Designer</p>
+          <p class="team-bio">Creating intuitive and beautiful user experiences that drive engagement and satisfaction.</p>
+        </div>
+
+        <!-- Team Member 3 -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="avatar-initials">VK</span>
+          </div>
+          <h3>Vikram Kulkarni</h3>
+          <p class="team-role">Database Architect</p>
+          <p class="team-bio">Specializing in database design, optimization and data management systems.</p>
+        </div>
+
+        <!-- Team Member 4 -->
+        <div class="team-card">
+          <div class="team-avatar">
+            <span class="avatar-initials">SM</span>
+          </div>
+          <h3>Sneha Mehta</h3>
+          <p class="team-role">Automation Engineer</p>
+          <p class="team-bio">Building intelligent automation solutions to streamline business processes.</p>
         </div>
       </div>
     </div>
@@ -243,6 +330,10 @@
             </span>
           </div>
         </div>
+      </div>
+
+      <div class="services-note">
+        <p>💡 <strong>Note:</strong> Want to view our real live projects or get detailed information about any service? Feel free to <a href="#contact">contact us</a> to schedule a demo or discuss your requirements.</p>
       </div>
     </div>
   </section>
@@ -438,6 +529,7 @@
           <h4 data-i18n="footer_quick">Quick Links</h4>
           <a href="#home" data-i18n="nav_home">Home</a>
           <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#team" data-i18n="nav_team">Team</a>
           <a href="#features" data-i18n="nav_features">Features</a>
           <a href="#projects">College Projects</a>
           <a href="#contact" data-i18n="nav_contact">Contact</a>

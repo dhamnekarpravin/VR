@@ -9,6 +9,7 @@ const translations = {
     // Navbar
     nav_home: "Home",
     nav_about: "About",
+    nav_team: "Team",
     nav_features: "Features",
     nav_testimonials: "Testimonials",
     nav_contact: "Contact",
@@ -35,6 +36,12 @@ const translations = {
     about_card1_text: "To empower hospitals, businesses and startups with modern, affordable and reliable digital solutions that drive real growth.",
     about_card2_title: "Our Vision",
     about_card2_text: "To become the most trusted technology partner for small and mid-size organizations across India.",
+
+    // Team
+    team_tag: "Our Team",
+    team_title: "Meet the Experts",
+    team_desc: "Passionate professionals dedicated to delivering exceptional digital solutions.",
+    team_founder_badge: "Founder",
 
     // Features
     features_tag: "What We Offer",
@@ -123,6 +130,7 @@ const translations = {
     // Navbar
     nav_home: "मुख्यपृष्ठ",
     nav_about: "आमच्याबद्दल",
+    nav_team: "टीम",
     nav_features: "सेवा",
     nav_testimonials: "प्रशंसापत्रे",
     nav_contact: "संपर्क",
@@ -149,6 +157,12 @@ const translations = {
     about_card1_text: "रुग्णालये, व्यवसाय आणि स्टार्टअप्सना आधुनिक, परवडणारी आणि विश्वासार्ह डिजिटल सोल्युशन्स देऊन वास्तविक वाढ करणे.",
     about_card2_title: "आमचे दृष्टिकोन",
     about_card2_text: "भारतातील लहान आणि मध्यम आकाराच्या संस्थांसाठी सर्वात विश्वासू तंत्रज्ञान भागीदार बनणे.",
+
+    // Team
+    team_tag: "आमची टीम",
+    team_title: "तज्ञांशी भेट",
+    team_desc: "असाधारण डिजिटल सोल्युशन्स देण्यासाठी समर्पित उत्साही व्यावसायिक.",
+    team_founder_badge: "संस्थापक",
 
     // Features
     features_tag: "आम्ही काय देतो",
